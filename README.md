@@ -12,17 +12,26 @@
 
 ### On the remote server:
 
-            Create a folder .ssh 
+        Create a folder .ssh 
             
-            Set the permissions as shown - or else it wont work
+        Set the permissions as shown - or else it wont work, 'chmod go-rwx .ssh'
 
-                [dpeuser@dpev559 ~]$ ls -ld .ssh/
-                drwx------ 2 dpeuser dpeuser 28 Sep 22 05:34 .ssh/
+        [dpeuser@dpev559 ~]$ ls -ld .ssh/
+        drwx------ 2 dpeuser dpeuser 28 Sep 22 05:34 .ssh/
 
 
-        Copy this id_rsa.pub from source server above, to  'authorized_keys' file on the remote server.
+        Copy the 'id_rsa.pub' from source server above, to  'authorized_keys' file on the remote server.
 
         [dpeuser@dpev559 ~]$ vi authorized_keys 
-         
+        
+        Set the file perms as shown,or else it wont work.
+ 
         [dpeuser@dpev559 .ssh]$ ls -ld authorized_keys 
         -rw------- 1 dpeuser dpeuser 416 Sep 22 05:31 authorized_keys
+
+
+### Try it out 
+
+    From the source server, scp a file to the remote server
+
+    scp  testfile  dpeuser@dpev559.innovate.ibm.com:
