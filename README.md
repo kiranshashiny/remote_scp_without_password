@@ -32,9 +32,15 @@
 
 ### Try it out 
 
-    From the source server, scp a file to the remote server
+    From the source server, scp a file to the remote server ( should work first time right away )
 
     scp  testfile  dpeuser@dpev559.innovate.ibm.com:
 
     $ scp testfile dpeuser@dpev559.innovate.ibm.com:
     testfile           100%   62     0.1KB/s   00:00  
+
+### Debugging tips 
+
+        http://unix.stackexchange.com/questions/182483/scp-without-password-prompt-using-different-username
+
+    
