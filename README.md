@@ -35,3 +35,6 @@
     From the source server, scp a file to the remote server
 
     scp  testfile  dpeuser@dpev559.innovate.ibm.com:
+
+    $ scp testfile dpeuser@dpev559.innovate.ibm.com:
+    testfile           100%   62     0.1KB/s   00:00  
