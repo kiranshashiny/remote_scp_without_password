@@ -12,5 +12,17 @@
 
 ### On the remote server:
 
-        Create a folder .ssh 
-        Copy this id_rsa.pub to authorized_keys 
+            Create a folder .ssh 
+            
+            Set the permissions as shown - or else it wont work
+
+                [dpeuser@dpev559 ~]$ ls -ld .ssh/
+                drwx------ 2 dpeuser dpeuser 28 Sep 22 05:34 .ssh/
+
+
+        Copy this id_rsa.pub from source server above, to  'authorized_keys' file on the remote server.
+
+        [dpeuser@dpev559 ~]$ vi authorized_keys 
+         
+        [dpeuser@dpev559 .ssh]$ ls -ld authorized_keys 
+        -rw------- 1 dpeuser dpeuser 416 Sep 22 05:31 authorized_keys
